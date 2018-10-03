@@ -4,6 +4,9 @@ from . import views
 urlpatterns = [
     url(r'^$', views.post_list, name='post_list'),
     url(r'^post/(?P<pk>\d+)/$', views.post_detail, name='post_detail'),
+    url(r'^post/new/$', views.post_new, name='post_new'),
+    url(r'^post/(?P<pk>\d+)/edit/$', views.post_edit, name='post_edit'),
+
 ]
 # post_list 라는 이름의 view가 ^$ URL에 할당된 것.
 #이 REGEX는 ^에서 시작해 $로 끝나는 지 매칭할 것.
