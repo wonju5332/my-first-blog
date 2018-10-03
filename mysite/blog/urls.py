@@ -2,9 +2,9 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.post_list, name = 'post_list'),
+    url(r'^$', views.post_list, name='post_list'),
+    url(r'^post/(?P<pk>\d+)/$', views.post_detail, name='post_detail'),
 ]
-
 # post_list 라는 이름의 view가 ^$ URL에 할당된 것.
 #이 REGEX는 ^에서 시작해 $로 끝나는 지 매칭할 것.
 # 즉, 문자열이 아무것도 없는 경우만 매칭 할 것.
